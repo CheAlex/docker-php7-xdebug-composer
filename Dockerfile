@@ -2,7 +2,7 @@ FROM php:7.0-fpm
 
 MAINTAINER Wenzel Pünter <wenzel@phelix.me>
 
-RUN apt-get update -yqq && apt-get install -y libsqlite3-dev libicu-dev libfreetype6-dev libmcrypt-dev libjpeg62-turbo-dev libpng12-dev git libcurl4-gnutls-dev libbz2-dev -yqq
+RUN apt-get update -yqq && apt-get install -y libsqlite3-dev libxml2-dev libicu-dev libfreetype6-dev libmcrypt-dev libjpeg62-turbo-dev libpng12-dev git libcurl4-gnutls-dev libbz2-dev -yqq
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install pdo_sqlite
 RUN docker-php-ext-install opcache
