@@ -28,5 +28,4 @@ RUN pecl install intl
 RUN docker-php-ext-install intl
 
 RUN curl -sS https://getcomposer.org/installer | php
-RUN php composer.phar install --verbose --no-interaction
 RUN mv composer.phar /usr/local/bin/composer
