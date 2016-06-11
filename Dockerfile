@@ -35,26 +35,3 @@ RUN docker-php-ext-install intl
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-
-# Install PHP tools
-RUN composer global require phpunit/phpunit
-RUN composer global require phpunit/php-code-coverage
-RUN composer global require phpunit/dbunit
-RUN composer global require phpdocumentor/phpdocumentor
-RUN composer global require sebastian/phpcpd
-RUN composer global require phploc/phploc
-RUN composer global require phpmd/phpmd
-
-# Install commonly used PHP frameworks
-RUN composer global require doctrine/orm
-RUN composer global require giggsey/libphonenumber-for-php
-RUN composer global require ircmaxell/random-lib
-RUN composer global require psr/log
-RUN composer global require symfony/polyfill-mbstring
-RUN composer global require monolog/monolog
-RUN composer global require symfony/yaml
-RUN composer global require guzzlehttp/guzzle
-RUN composer global require guzzlehttp/psr7
-RUN composer global require twig/twig
-RUN composer global require league/flysystem
-RUN composer global require pimple/pimple
