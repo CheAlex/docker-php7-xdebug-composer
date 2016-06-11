@@ -15,6 +15,7 @@ RUN docker-php-ext-install bz2
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install mcrypt
 RUN docker-php-ext-install curl
+RUN docker-php-ext-install phar
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 
@@ -26,3 +27,4 @@ RUN docker-php-ext-install intl
 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN php composer.phar install --verbose --no-interaction
+RUN mv composer.phar /usr/local/bin/composer
